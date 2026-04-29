@@ -115,7 +115,7 @@ InternShield/
     Important text columns are combined into one feature called combined_text.
 
     Columns used include:
-    
+    ```
     title
     company_profile
     description
@@ -126,29 +126,85 @@ InternShield/
     required_education
     industry
     function
-
+    ```
 3. Feature Extraction
 
     The combined job text is converted into numerical features using:
-
+        ```
       TF-IDF Vectorization
-
-4. Model Training
+        ```
+   
+5. Model Training
 
     A Logistic Regression model is trained to classify job postings as real or fake.
 
     The model uses:
+   ```
       class_weight="balanced"
+   ```
     This helps handle the imbalance between real and fake job postings.
 
-5. Evaluation
+7. Evaluation
 
     The model is evaluated using:
-    
+    ```
     Accuracy
     Precision
     Recall
     F1-score
     Confusion matrix
-    
+    ```
     Because fake postings are less common than real postings, F1-score and recall are especially important.
+
+   ---
+
+## How to Run the Project
+
+1. Clone the repository
+   ```
+    git clone https://github.com/sea-rii/InternShield.git
+    cd InternShield
+   ```
+   
+2. Create and activate a virtual environment
+ ```
+    python -m venv venv
+    source venv/bin/activate
+```
+
+For Windows:
+    ```
+    venv\Scripts\activate
+    ```
+    
+3. Install dependencies
+     ```
+    pip install -r requirements.txt
+    ```
+     
+4. Add the dataset
+
+    Download the Kaggle dataset and place it here:
+```
+    data/fake_job_postings.csv
+```
+
+5. Open Jupyter Notebook
+    ```
+    jupyter notebook
+   ```
+
+    Then open:
+    ```
+    notebooks/01_fake_job_detector.ipynb
+    ```
+
+    Run all cells from top to bottom.
+
+---
+
+## Disclaimer
+
+InternShield is an educational machine learning project. It should not be used as the only source of truth for determining whether a job posting is legitimate.
+
+Users should always verify job postings through official company websites, recruiter profiles, and trusted career platforms before sharing personal information.
