@@ -83,7 +83,8 @@ fraudulent
 Where:
 0 = real job posting
 1 = fake job posting
-> Note: The dataset is not included in this repository. Download it from Kaggle and place the CSV file inside a data/ folder.
+
+Note: The dataset is not included in this repository. Download it from Kaggle and place the CSV file inside a data/ folder.
 ```
 
 Expected structure:
@@ -98,5 +99,56 @@ InternShield/
 │   └── tfidf_vectorizer.pkl
 ├── README.md
 ├── requirements.txt
-```
 └── .gitignore
+```
+
+---
+
+## Approach
+
+1. Data Loading
+
+The dataset is loaded using Pandas.
+
+2. Text Preprocessing
+
+Important text columns are combined into one feature called combined_text.
+
+Columns used include:
+
+title
+company_profile
+description
+requirements
+benefits
+employment_type
+required_experience
+required_education
+industry
+function
+
+3. Feature Extraction
+
+The combined job text is converted into numerical features using:
+
+  TF-IDF Vectorization
+
+4. Model Training
+
+A Logistic Regression model is trained to classify job postings as real or fake.
+
+The model uses:
+  class_weight="balanced"
+This helps handle the imbalance between real and fake job postings.
+
+5. Evaluation
+
+The model is evaluated using:
+
+Accuracy
+Precision
+Recall
+F1-score
+Confusion matrix
+
+Because fake postings are less common than real postings, F1-score and recall are especially important.
