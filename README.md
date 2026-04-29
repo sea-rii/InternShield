@@ -208,3 +208,9 @@ For Windows:
 InternShield is an educational machine learning project. It should not be used as the only source of truth for determining whether a job posting is legitimate.
 
 Users should always verify job postings through official company websites, recruiter profiles, and trusted career platforms before sharing personal information.
+
+---
+
+## Created By
+
+**Sai Siri Chittineni**
