@@ -131,7 +131,7 @@ InternShield/
 
     The combined job text is converted into numerical features using:
         ```
-      TF-IDF Vectorization
+   TF-IDF Vectorization
         ```
    
 5. Model Training
@@ -140,7 +140,7 @@ InternShield/
 
     The model uses:
    ```
-      class_weight="balanced"
+   class_weight="balanced"
    ```
     This helps handle the imbalance between real and fake job postings.
 
@@ -167,10 +167,10 @@ InternShield/
    ```
    
 2. Create and activate a virtual environment
- ```
+     ```
     python -m venv venv
     source venv/bin/activate
-```
+    ```
 
 For Windows:
     ```
@@ -178,21 +178,21 @@ For Windows:
     ```
     
 3. Install dependencies
-     ```
+    ```
     pip install -r requirements.txt
     ```
      
 4. Add the dataset
 
     Download the Kaggle dataset and place it here:
-```
+    ```
     data/fake_job_postings.csv
-```
+    ```
 
 5. Open Jupyter Notebook
     ```
     jupyter notebook
-   ```
+    ```
 
     Then open:
     ```
