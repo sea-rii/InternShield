@@ -156,7 +156,7 @@ InternShield/
     ```
     Because fake postings are less common than real postings, F1-score and recall are especially important.
 
-   ---
+---
 
 ## How to Run the Project
 
